@@ -1,0 +1,7 @@
+.curve-divider {
+  width: 100%;
+
+  &.offset {
+    transform: translate(0px, 10px);
+  }
+}

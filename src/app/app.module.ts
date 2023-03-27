@@ -11,6 +11,7 @@ import { SkillsPageComponent } from './components/pages/skills-page/skills-page.
 import { ContactPageComponent } from './components/pages/contact-page/contact-page.component';
 import { SkillBarComponent } from './components/skill-bar/skill-bar.component';
 import { SkillTypeComponent } from './components/skill-type/skill-type.component';
+import { PageDividerComponent } from './components/page-divider/page-divider.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { SkillTypeComponent } from './components/skill-type/skill-type.component
     ContactPageComponent,
     SkillBarComponent,
     SkillTypeComponent,
+    PageDividerComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
