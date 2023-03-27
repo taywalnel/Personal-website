@@ -7,29 +7,7 @@ import { Component } from '@angular/core';
 })
 export class SkillsPageComponent {
   skills = {
-    languages: [
-      {
-        label: 'TypeScript',
-        rating: '80%',
-      },
-      {
-        label: 'JavaScript',
-        rating: '70%',
-      },
-      {
-        label: 'HTML',
-        rating: '90%',
-      },
-      {
-        label: 'CSS',
-        rating: '90%',
-      },
-      {
-        label: 'Python',
-        rating: '40%',
-      },
-    ],
-    technology: [
+    frontend: [
       {
         label: 'Angular',
         rating: '90%',
@@ -39,15 +17,33 @@ export class SkillsPageComponent {
         rating: '50%',
       },
       {
-        label: 'NodeJS',
-        rating: '60%',
+        label: 'JavaScript',
+        rating: '90%',
       },
       {
-        label: 'RxJS',
-        rating: '70%',
+        label: 'HTML',
+        rating: '90%',
+      },
+      {
+        label: 'CSS',
+        rating: '90%',
       },
     ],
-    software: [
+    backend: [
+      {
+        label: 'NodeJS',
+        rating: '70%',
+      },
+      {
+        label: 'MongoDB',
+        rating: '50%',
+      },
+      {
+        label: 'ExpressJS',
+        rating: '50%',
+      },
+    ],
+    additional: [
       {
         label: 'Photoshop',
         rating: '70%',
@@ -59,6 +55,10 @@ export class SkillsPageComponent {
       {
         label: 'AWS',
         rating: '60%',
+      },
+      {
+        label: 'RxJS',
+        rating: '80%',
       },
     ],
   };
