@@ -18,15 +18,14 @@ import {
 })
 export class AppComponent implements OnInit {
   title = 'personal-website';
-  scrollEvent: Observable<Event>;
+  scrollEvent$: Observable<Event>;
   currentPage$: Observable<string>;
-  onInitializtion$ = new Subject<boolean>();
 
   constructor(private viewportScroller: ViewportScroller) {}
 
   ngOnInit() {
-    this.scrollEvent = fromEvent(document, 'wheel');
-    this.currentPage$ = this.scrollEvent.pipe(
+    this.scrollEvent$ = fromEvent(document, 'wheel');
+    this.currentPage$ = this.scrollEvent$.pipe(
       debounceTime(10),
       switchMap(() => this.getCurrentPage()),
       filter(this.isDefined)
