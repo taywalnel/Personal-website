@@ -4,10 +4,8 @@ import {
   debounceTime,
   filter,
   fromEvent,
-  merge,
   Observable,
   of,
-  Subject,
   switchMap,
 } from 'rxjs';
 
