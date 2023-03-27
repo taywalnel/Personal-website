@@ -1,0 +1,35 @@
+.page-wrapper {
+  min-height: fit-content;
+
+  .intro {
+    padding: 0 0 40px 0;
+    width: 100%;
+  }
+
+  .contact-details {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+
+    .contact-field {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      img {
+        filter: invert(25%) sepia(70%) saturate(2543%) hue-rotate(181deg)
+          brightness(98%) contrast(101%);
+      }
+
+      h3 {
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .contact-details {
+    flex-direction: column;
+  }
+}

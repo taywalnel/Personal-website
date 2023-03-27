@@ -1,0 +1,21 @@
+.root {
+  width: 100vw;
+  height: 100wh;
+
+  font-family: "Manrope", sans-serif;
+}
+
+.footer {
+  height: 100px;
+  background-color: #e4e4e4;
+  display: grid;
+  place-items: center;
+}
+
+.curve-divider {
+  width: 100%;
+
+  &.offset {
+    transform: translate(0px, 10px);
+  }
+}

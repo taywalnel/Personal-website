@@ -1,0 +1,50 @@
+<div class="navigation-bar">
+  <div class="header" (click)="linkClickHandler('landing-page')">
+    <span class="color1">taylor</span><span class="color2">nelson</span>.dev
+  </div>
+  <div class="navigation">
+    <span
+      class="link"
+      [class.active-page]="currentPage === 'landing-page'"
+      (click)="linkClickHandler('landing-page')"
+      >Home</span
+    >
+    <span
+      class="link"
+      [class.active-page]="currentPage === 'about-page'"
+      (click)="linkClickHandler('about-page')"
+      >About</span
+    >
+    <span
+      class="link"
+      [class.active-page]="currentPage === 'projects-page'"
+      (click)="linkClickHandler('projects-page')"
+      >Projects</span
+    >
+    <span
+      class="link"
+      [class.active-page]="currentPage === 'skills-page'"
+      (click)="linkClickHandler('skills-page')"
+      >Skills</span
+    >
+    <span
+      class="link"
+      [class.active-page]="currentPage === 'contact-page'"
+      (click)="linkClickHandler('contact-page')"
+      >Contact</span
+    >
+  </div>
+  <div (click)="hamburgerClickHandler()" class="hamburger-icon">
+    <img src="assets/hamburger.svg" />
+  </div>
+</div>
+
+<div class="hambuger-menu" [class.show]="hamburgerMenuOpen">
+  <h3 class="link" (click)="linkClickHandler('landing-page', true)">Home</h3>
+  <h3 class="link" (click)="linkClickHandler('about-page', true)">About</h3>
+  <h3 class="link" (click)="linkClickHandler('projects-page', true)">
+    Projects
+  </h3>
+  <h3 class="link" (click)="linkClickHandler('skills-page', true)">Skills</h3>
+  <h3 class="link" (click)="linkClickHandler('contact-page', true)">Contact</h3>
+</div>

@@ -1,0 +1,7 @@
+<h3>{{ title }}</h3>
+<ng-container *ngFor="let skill of skills">
+  <div class="skill">
+    <h4>{{ skill.label }}</h4>
+    <app-skill-bar [skillWidth]="skill.rating"></app-skill-bar>
+  </div>
+</ng-container>

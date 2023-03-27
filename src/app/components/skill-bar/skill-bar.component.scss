@@ -1,0 +1,11 @@
+.skill-bar-wrapper {
+  height: 3px;
+  background-color: #333;
+  width: 100%;
+  margin: 10px 0;
+
+  .skill-bar {
+    height: 100%;
+    background-color: #00b9ae;
+  }
+}
