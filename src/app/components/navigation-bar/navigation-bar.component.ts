@@ -1,5 +1,6 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-navigation-bar',
@@ -10,10 +11,16 @@ export class NavigationBarComponent implements OnInit {
   hamburgerMenuOpen = false;
   currentPage = 'landing-page';
 
-  constructor(private viewportScroller: ViewportScroller) {}
+  constructor(
+    private viewportScroller: ViewportScroller,
+    private app: AppComponent
+  ) {}
 
   ngOnInit() {
     this.viewportScroller.setOffset([0, 70]);
+    this.app.currentPage$.subscribe((currentPage) => {
+      this.currentPage = currentPage;
+    });
   }
 
   linkClickHandler(page: string, isMobile = false) {
