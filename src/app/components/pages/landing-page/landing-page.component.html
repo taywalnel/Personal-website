@@ -1,4 +1,8 @@
-<div id="landing-page" class="page-wrapper">
+<div
+  id="landing-page"
+  class="page-wrapper"
+  [class.in-viewport]="(app.currentPage$ | async) === 'landing-page'"
+>
   <div class="page-content">
     <div #testDiv class="intro-wrapper">
       <div class="intro-message">
