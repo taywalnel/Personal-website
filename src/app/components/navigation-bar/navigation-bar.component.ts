@@ -9,7 +9,7 @@ import { AppComponent } from 'src/app/app.component';
 })
 export class NavigationBarComponent implements OnInit {
   hamburgerMenuOpen = false;
-  currentPage = 'landing-page';
+  currentPage = '';
 
   constructor(
     private viewportScroller: ViewportScroller,

@@ -1,11 +1,12 @@
-import { ViewportScroller } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import {
   debounceTime,
   filter,
   fromEvent,
+  merge,
   Observable,
   of,
+  Subject,
   switchMap,
 } from 'rxjs';
 
@@ -14,24 +15,23 @@ import {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewInit {
   title = 'personal-website';
   scrollEvent$: Observable<Event>;
   currentPage$: Observable<string>;
-
-  constructor(private viewportScroller: ViewportScroller) {}
+  pageInitialized$ = new Subject<boolean>();
 
   ngOnInit() {
     this.scrollEvent$ = fromEvent(document, 'wheel');
-    this.currentPage$ = this.scrollEvent$.pipe(
+    this.currentPage$ = merge(this.pageInitialized$, this.scrollEvent$).pipe(
       debounceTime(10),
       switchMap(() => this.getCurrentPage()),
       filter(this.isDefined)
     );
   }
 
-  ngAfterViewInit() {
-    this.viewportScroller.scrollToAnchor('landing-page');
+  ngAfterViewInit(): void {
+    this.pageInitialized$.next(true);
   }
 
   getCurrentPage(): Observable<string | undefined> {
