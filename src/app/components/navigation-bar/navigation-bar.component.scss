@@ -55,7 +55,7 @@
 
 .link {
   cursor: pointer;
-  transition: color 0.3 ease-in-out;
+  transition: color 0.3s ease-in-out;
 
   &.active-page {
     color: $primaryAccentColor;
