@@ -22,7 +22,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   pageInitialized$ = new Subject<boolean>();
 
   ngOnInit() {
-    this.scrollEvent$ = fromEvent(document, 'wheel');
+    this.scrollEvent$ = fromEvent(document, 'scroll');
     this.currentPage$ = merge(this.pageInitialized$, this.scrollEvent$).pipe(
       debounceTime(10),
       switchMap(() => this.getCurrentPage()),
