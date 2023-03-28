@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { takeUntil } from 'rxjs';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-skills-page',
   templateUrl: './skills-page.component.html',
   styleUrls: ['./skills-page.component.scss'],
 })
-export class SkillsPageComponent {
+export class SkillsPageComponent implements OnInit {
+  triggerAnimation = false;
   skills = {
     frontend: [
       {
@@ -66,4 +69,15 @@ export class SkillsPageComponent {
       },
     ],
   };
+
+  constructor(private app: AppComponent) {}
+
+  ngOnInit() {
+    const subscriber = this.app.currentPage$.subscribe((currentPage) => {
+      if (currentPage === 'skills-page') {
+        this.triggerAnimation = true;
+        subscriber.unsubscribe();
+      }
+    });
+  }
 }

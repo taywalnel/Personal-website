@@ -7,18 +7,42 @@
       create unique experiences that leave an imprint on the end user.
     </p>
     <div class="skills">
-      <app-skill-type
-        title="Frontend"
-        [skills]="skills.frontend"
-      ></app-skill-type>
-      <app-skill-type
-        title="Backend"
-        [skills]="skills.backend"
-      ></app-skill-type>
-      <app-skill-type
-        title="Additional"
-        [skills]="skills.additional"
-      ></app-skill-type>
+      <div class="skill-type">
+        <h3>Frontend</h3>
+        <ng-container *ngFor="let skill of skills.frontend">
+          <div class="skill">
+            <h4>{{ skill.label }}</h4>
+            <app-skill-bar
+              [skillWidth]="skill.rating"
+              [triggerAnimation]="triggerAnimation"
+            ></app-skill-bar>
+          </div>
+        </ng-container>
+      </div>
+      <div class="skill-type">
+        <h3>Backend</h3>
+        <ng-container *ngFor="let skill of skills.backend">
+          <div class="skill">
+            <h4>{{ skill.label }}</h4>
+            <app-skill-bar
+              [skillWidth]="skill.rating"
+              [triggerAnimation]="triggerAnimation"
+            ></app-skill-bar>
+          </div>
+        </ng-container>
+      </div>
+      <div class="skill-type">
+        <h3>Additional</h3>
+        <ng-container *ngFor="let skill of skills.additional">
+          <div class="skill">
+            <h4>{{ skill.label }}</h4>
+            <app-skill-bar
+              [skillWidth]="skill.rating"
+              [triggerAnimation]="triggerAnimation"
+            ></app-skill-bar>
+          </div>
+        </ng-container>
+      </div>
     </div>
   </div>
 </div>
