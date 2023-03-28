@@ -12,4 +12,8 @@
   background-color: $colorGrey;
   display: grid;
   place-items: center;
+
+  p {
+    font-size: 14px;
+  }
 }
