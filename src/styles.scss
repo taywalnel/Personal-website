@@ -1,9 +1,15 @@
+@import "app/constants/colors.scss";
+
 * {
   margin: 0;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+p {
+  font-size: 18px;
 }
 
 h1,
@@ -21,15 +27,11 @@ h2 {
   .bold {
     font-weight: bold;
   }
-
-  .color {
-    // color: #00b9ae;
-  }
 }
 
 h3 {
   font-size: 22px;
-  color: #006e66;
+  color: $secondaryAccentColor;
   padding: 0 0 20px 0;
 }
 
@@ -55,8 +57,7 @@ a {
   place-items: center;
 
   &.alt-background-color {
-    // background-color: #e4e4e4;
-    background-color: #f1f1f1;
+    background-color: $colorGrey;
   }
 
   .page-content {
