@@ -1,11 +1,18 @@
+@import "/src/app/constants/colors.scss";
+
 .skill-bar-wrapper {
-  height: 3px;
-  background-color: #333;
+  height: 3.5px;
+  background-color: $colorWhite;
   width: 100%;
   margin: 10px 0;
 
   .skill-bar {
     height: 100%;
-    background-color: #00b9ae;
+    background-color: $primaryAccentColor;
+    transition: width 0.3s 0.8s cubic-bezier(0.76, 0, 0.24, 1);
+
+    &.no-width {
+      width: 0 !important;
+    }
   }
 }

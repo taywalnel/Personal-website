@@ -10,7 +10,6 @@ import { ProjectsPageComponent } from './components/pages/projects-page/projects
 import { SkillsPageComponent } from './components/pages/skills-page/skills-page.component';
 import { ContactPageComponent } from './components/pages/contact-page/contact-page.component';
 import { SkillBarComponent } from './components/skill-bar/skill-bar.component';
-import { SkillTypeComponent } from './components/skill-type/skill-type.component';
 import { PageDividerComponent } from './components/page-divider/page-divider.component';
 
 @NgModule({
@@ -23,7 +22,6 @@ import { PageDividerComponent } from './components/page-divider/page-divider.com
     SkillsPageComponent,
     ContactPageComponent,
     SkillBarComponent,
-    SkillTypeComponent,
     PageDividerComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],

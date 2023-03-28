@@ -43,18 +43,7 @@
   }
 }
 
-.headshot-wrapper {
-  padding: 20px;
-  border-radius: 100%;
-  background-color: #e4e4e4;
-
-  .headshot {
-    width: 200px;
-    border-radius: 100%;
-  }
-}
-
-.is-scrolled-into-view .wave-emoji {
+.in-viewport .wave-emoji {
   animation: wave 0.24s 3 cubic-bezier(0.76, 0, 0.24, 1);
 }
 

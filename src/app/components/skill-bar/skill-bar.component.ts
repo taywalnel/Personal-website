@@ -7,4 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class SkillBarComponent {
   @Input() skillWidth: string = '0%';
+  @Input() triggerAnimation = false;
 }
