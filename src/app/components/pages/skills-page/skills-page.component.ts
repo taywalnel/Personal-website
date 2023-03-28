@@ -18,6 +18,10 @@ export class SkillsPageComponent {
       },
       {
         label: 'JavaScript',
+        rating: '80%',
+      },
+      {
+        label: 'TypeScript',
         rating: '90%',
       },
       {
@@ -50,7 +54,7 @@ export class SkillsPageComponent {
       },
       {
         label: 'Figma',
-        rating: '70%',
+        rating: '60%',
       },
       {
         label: 'AWS',
