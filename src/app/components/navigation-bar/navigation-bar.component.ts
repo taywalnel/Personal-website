@@ -17,7 +17,7 @@ export class NavigationBarComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.viewportScroller.setOffset([0, 70]);
+    this.viewportScroller.setOffset([0, 30]);
     this.app.currentPage$.subscribe((currentPage) => {
       this.currentPage = currentPage;
     });
