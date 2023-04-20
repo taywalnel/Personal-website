@@ -1,8 +1,7 @@
 @import "constants/colors.scss";
 
 .root {
-  width: 100vw;
-  height: 100wh;
+  overflow-x: hidden;
 
   font-family: "Manrope", sans-serif;
 }
