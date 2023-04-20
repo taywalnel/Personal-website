@@ -1,3 +1,5 @@
+@import "/src/app/constants/colors.scss";
+
 .page-wrapper {
   min-height: 100vh;
   min-width: 100vw;
@@ -41,6 +43,13 @@
       width: 28px;
     }
   }
+}
+
+.avatar {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 100%;
+  background-color: $primaryAccentColor;
 }
 
 .in-viewport .wave-emoji {

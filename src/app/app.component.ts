@@ -1,13 +1,14 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import {
   debounceTime,
+  distinctUntilChanged,
   filter,
   fromEvent,
   merge,
   Observable,
   of,
   Subject,
-  switchMap,
+  switchMap
 } from 'rxjs';
 
 @Component({
@@ -26,7 +27,9 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.currentPage$ = merge(this.pageInitialized$, this.scrollEvent$).pipe(
       debounceTime(10),
       switchMap(() => this.getCurrentPage()),
-      filter(this.isDefined)
+      filter(this.isDefined),
+      distinctUntilChanged(),
+      debounceTime(300)
     );
   }
 

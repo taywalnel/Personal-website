@@ -1,15 +1,17 @@
 @import "/src/app/constants/colors.scss";
 
 .skill-bar-wrapper {
-  height: 3.5px;
-  background-color: $colorWhite;
+  height: 4px;
+  background-color: #ebebeb;
   width: 100%;
   margin: 10px 0;
+  border-radius: 20px;
+  overflow: hidden;
 
   .skill-bar {
     height: 100%;
     background-color: $primaryAccentColor;
-    transition: width 0.3s 0.8s cubic-bezier(0.76, 0, 0.24, 1);
+    transition: width 0.6s 0.3s cubic-bezier(0.76, 0, 0.24, 1);
 
     &.no-width {
       width: 0 !important;

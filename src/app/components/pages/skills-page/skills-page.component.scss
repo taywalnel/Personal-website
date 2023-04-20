@@ -13,6 +13,20 @@
   flex-basis: 100%;
 }
 
+.skills-wrapper {
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+  border-radius: 20px;
+
+  h3 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 .skill {
   display: flex;
   flex-direction: column;

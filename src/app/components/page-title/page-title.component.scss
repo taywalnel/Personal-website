@@ -1,0 +1,21 @@
+@import "/src/app/constants/colors.scss";
+
+:host {
+  width: 100%;
+}
+
+.title {
+  padding: 0 0 20px 0;
+
+  h2 {
+    font-size: 30px;
+    padding: 0;
+    color: $colorDarkGrey;
+  }
+
+  span {
+    color: $primaryAccentColor;
+    font-size: 18px;
+    font-weight: bold;
+  }
+}

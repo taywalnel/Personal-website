@@ -1,3 +1,5 @@
+@import "/src/app/constants/colors.scss";
+
 .page-wrapper {
   min-height: fit-content;
 
@@ -10,6 +12,11 @@
     width: 100%;
     display: flex;
     gap: 40px;
+    padding: 20px;
+    background-color: $colorWhite;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+    box-sizing: border-box;
 
     .contact-field {
       display: flex;

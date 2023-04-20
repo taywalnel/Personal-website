@@ -3,7 +3,6 @@
 :host {
   position: fixed;
   width: 100%;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 15px;
   z-index: 10;
 }
 
@@ -55,7 +54,7 @@
 
 .link {
   cursor: pointer;
-  transition: color 0.3 ease-in-out;
+  transition: color 0.3s ease-in-out;
 
   &.active-page {
     color: $primaryAccentColor;

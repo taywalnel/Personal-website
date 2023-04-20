@@ -1,6 +1,5 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { debounceTime } from 'rxjs';
 import { AppComponent } from 'src/app/app.component';
 
 @Component({
@@ -18,8 +17,8 @@ export class NavigationBarComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.viewportScroller.setOffset([0, 70]);
-    this.app.currentPage$.pipe(debounceTime(600)).subscribe((currentPage) => {
+    this.viewportScroller.setOffset([0, 30]);
+    this.app.currentPage$.subscribe((currentPage) => {
       this.currentPage = currentPage;
     });
   }
