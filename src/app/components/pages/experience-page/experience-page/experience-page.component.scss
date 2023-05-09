@@ -78,8 +78,6 @@
       font-weight: 800;
     }
     &.horizontal {
-      // writing-mode: vertical-rl;
-      // text-orientation: upright;
       writing-mode: vertical-rl;
       text-orientation: mixed;
       transform: rotate(180deg);
