@@ -12,6 +12,7 @@ import { ContactPageComponent } from './components/pages/contact-page/contact-pa
 import { SkillBarComponent } from './components/skill-bar/skill-bar.component';
 import { PageDividerComponent } from './components/page-divider/page-divider.component';
 import { PageTitleComponent } from './components/page-title/page-title.component';
+import { ExperiencePageComponent } from './components/pages/experience-page/experience-page/experience-page.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { PageTitleComponent } from './components/page-title/page-title.component
     SkillBarComponent,
     PageDividerComponent,
     PageTitleComponent,
+    ExperiencePageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

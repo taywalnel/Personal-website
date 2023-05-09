@@ -1,0 +1,28 @@
+.content-wrapper {
+  display: flex;
+  gap: 40px;
+
+  .timeline-content {
+    flex-basis: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .timeline-item {
+      border-radius: 20px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+  }
+
+  .text-content {
+    flex: 1;
+  }
+
+  .small-text {
+    font-weight: 800;
+    font-size: 14px;
+  }
+
+}
