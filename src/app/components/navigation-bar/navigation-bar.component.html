@@ -44,13 +44,9 @@
   (click)="hamburgerClickHandler()"
   [class.show]="hamburgerMenuOpen"
 >
-  <h3 class="link" (click)="linkClickHandler('about-page', true)">About</h3>
-  <h3 class="link" (click)="linkClickHandler('experience-page', true)">
-    Experience
-  </h3>
-  <h3 class="link" (click)="linkClickHandler('projects-page', true)">
-    Projects
-  </h3>
-  <h3 class="link" (click)="linkClickHandler('skills-page', true)">Skills</h3>
-  <h3 class="link" (click)="linkClickHandler('contact-page', true)">Contact</h3>
+  <h3 class="link" (click)="linkClickHandler('about-page')">About</h3>
+  <h3 class="link" (click)="linkClickHandler('experience-page')">Experience</h3>
+  <h3 class="link" (click)="linkClickHandler('projects-page')">Projects</h3>
+  <h3 class="link" (click)="linkClickHandler('skills-page')">Skills</h3>
+  <h3 class="link" (click)="linkClickHandler('contact-page')">Contact</h3>
 </div>

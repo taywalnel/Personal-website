@@ -23,7 +23,7 @@ export class NavigationBarComponent implements OnInit {
     });
   }
 
-  linkClickHandler(page: string, isMobile = false) {
+  linkClickHandler(page: string) {
     this.currentPage = page;
     this.viewportScroller.scrollToAnchor(page);
   }
