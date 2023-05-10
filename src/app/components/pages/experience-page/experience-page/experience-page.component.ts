@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-experience-page',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./experience-page.component.scss']
 })
 export class ExperiencePageComponent {
+  constructor(public app: AppComponent) { }
 
 }

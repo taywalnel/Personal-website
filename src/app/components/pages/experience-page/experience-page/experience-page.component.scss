@@ -52,6 +52,9 @@
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
       background-color: white;
       padding: 10px;
+      opacity: 0;
+      transform: translateY(50%);
+      transition: all 0.5s ease-in-out;
 
       .timeline-item-content {
         padding: 10px;
@@ -63,6 +66,22 @@
         padding: 0 0 10px 0;
         display: block;
       }
+    }
+
+    .timeline-item-wrapper:nth-child(2) {
+      transition-delay: 0.3s;
+    }
+
+    .timeline-item-wrapper:nth-child(3) {
+      transition-delay: 0.5s;
+    }
+
+    .timeline-item-wrapper:nth-child(4) {
+      transition-delay: 0.7s;
+    }
+
+    .timeline-item-wrapper:nth-child(5) {
+      transition-delay: 0.9s;
     }
   }
 
@@ -83,6 +102,13 @@
       transform: rotate(180deg);
       color: grey;
     }
+  }
+}
+
+.current-page {
+  .timeline-item-wrapper {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
   }
 }
 
