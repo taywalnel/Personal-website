@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { takeUntil } from 'rxjs';
 import { AppComponent } from 'src/app/app.component';
 
 @Component({
@@ -73,11 +72,8 @@ export class SkillsPageComponent implements OnInit {
   constructor(private app: AppComponent) {}
 
   ngOnInit() {
-    const subscriber = this.app.currentPage$.subscribe((currentPage) => {
-      if (currentPage === 'skills-page') {
-        this.triggerAnimation = true;
-        subscriber.unsubscribe();
-      }
+    this.app.currentPage$.subscribe((currentPage) => {
+        this.triggerAnimation = currentPage === 'skills-page';
     });
   }
 }
