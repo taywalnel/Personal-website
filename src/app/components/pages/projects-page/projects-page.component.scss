@@ -7,6 +7,12 @@
   }
 }
 
+.projects-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .project-wrapper {
   width: 100%;
   padding: 20px;
