@@ -1,6 +1,9 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import {
+  BehaviorSubject,
   debounceTime,
+  delay,
+  delayWhen,
   distinctUntilChanged,
   filter,
   fromEvent,
@@ -8,7 +11,8 @@ import {
   Observable,
   of,
   Subject,
-  switchMap
+  switchMap,
+  tap,
 } from 'rxjs';
 
 @Component({
@@ -16,25 +20,24 @@ import {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit, AfterViewInit {
+export class AppComponent implements OnInit {
   title = 'personal-website';
   scrollEvent$: Observable<Event>;
   currentPage$: Observable<string>;
-  pageInitialized$ = new Subject<boolean>();
+  pageInitialized$ = new BehaviorSubject<boolean>(false);
 
   ngOnInit() {
-    this.scrollEvent$ = fromEvent(document, 'scroll');
+    this.scrollEvent$ = fromEvent(document, 'scroll').pipe();
     this.currentPage$ = merge(this.pageInitialized$, this.scrollEvent$).pipe(
       debounceTime(10),
       switchMap(() => this.getCurrentPage()),
       filter(this.isDefined),
       distinctUntilChanged(),
+      delayWhen((value, index) =>
+        index === 0 ? of(value).pipe(delay(500)) : of(value)
+      ),
       debounceTime(300)
     );
-  }
-
-  ngAfterViewInit(): void {
-    this.pageInitialized$.next(true);
   }
 
   getCurrentPage(): Observable<string | undefined> {

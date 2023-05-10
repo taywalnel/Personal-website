@@ -8,4 +8,8 @@ import { AppComponent } from 'src/app/app.component';
 })
 export class LandingPageComponent {
   constructor(public app: AppComponent) {}
+
+  handleAvatarImgLoad() {
+    this.app.pageInitialized$.next(true);
+  }
 }

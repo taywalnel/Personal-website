@@ -13,7 +13,7 @@ export class NavigationBarComponent implements OnInit {
 
   constructor(
     private viewportScroller: ViewportScroller,
-    private app: AppComponent
+    public app: AppComponent
   ) {}
 
   ngOnInit() {

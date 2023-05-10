@@ -2,9 +2,14 @@
   id="landing-page"
   class="page-wrapper"
   [class.in-viewport]="(app.currentPage$ | async) === 'landing-page'"
+  [class.page-loaded]="app.pageInitialized$ | async"
 >
   <div class="page-content">
-    <img class="avatar" src="assets/avatar.svg" />
+    <img
+      (load)="handleAvatarImgLoad()"
+      class="avatar"
+      src="assets/avatar.svg"
+    />
     <div class="intro-wrapper">
       <div class="intro-message">
         <span class="large-text"
