@@ -14,11 +14,12 @@
     .arrow-wrapper {
       position: absolute;
       top: 0;
-      height: 100%;
+      height: 0;
       width: 100%;
       display: flex;
       justify-content: center;
       z-index: 1;
+      transition: height 0.5s ease-in-out;
 
       .arrow {
         height: 100%;
@@ -69,19 +70,19 @@
     }
 
     .timeline-item-wrapper:nth-child(2) {
-      transition-delay: 0.3s;
-    }
-
-    .timeline-item-wrapper:nth-child(3) {
       transition-delay: 0.5s;
     }
 
-    .timeline-item-wrapper:nth-child(4) {
+    .timeline-item-wrapper:nth-child(3) {
       transition-delay: 0.7s;
     }
 
-    .timeline-item-wrapper:nth-child(5) {
+    .timeline-item-wrapper:nth-child(4) {
       transition-delay: 0.9s;
+    }
+
+    .timeline-item-wrapper:nth-child(5) {
+      transition-delay: 1.1s;
     }
   }
 
@@ -106,6 +107,10 @@
 }
 
 .current-page {
+  .arrow-wrapper {
+    height: 100% !important;
+  }
+
   .timeline-item-wrapper {
     opacity: 1 !important;
     transform: translateY(0) !important;

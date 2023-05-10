@@ -39,9 +39,15 @@
   </div>
 </div>
 
-<div class="hambuger-menu" [class.show]="hamburgerMenuOpen">
-  <h3 class="link" (click)="linkClickHandler('landing-page', true)">Home</h3>
+<div
+  class="hambuger-menu"
+  (click)="hamburgerClickHandler()"
+  [class.show]="hamburgerMenuOpen"
+>
   <h3 class="link" (click)="linkClickHandler('about-page', true)">About</h3>
+  <h3 class="link" (click)="linkClickHandler('experience-page', true)">
+    Experience
+  </h3>
   <h3 class="link" (click)="linkClickHandler('projects-page', true)">
     Projects
   </h3>

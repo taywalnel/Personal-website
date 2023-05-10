@@ -26,10 +26,6 @@ export class NavigationBarComponent implements OnInit {
   linkClickHandler(page: string, isMobile = false) {
     this.currentPage = page;
     this.viewportScroller.scrollToAnchor(page);
-
-    if (isMobile) {
-      this.hamburgerMenuOpen = false;
-    }
   }
 
   hamburgerClickHandler() {
