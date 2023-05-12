@@ -5,40 +5,41 @@
 
 .skills {
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.skill-wrapper {
   display: flex;
-  gap: 40px;
-}
-
-.skill-type {
-  flex-basis: 100%;
-}
-
-.skills-wrapper {
-  height: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  background-color: white;
-  border-radius: 20px;
-
-  h3 {
-    width: 100%;
-    text-align: center;
-  }
+  justify-content: center;
 }
 
 .skill {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  .icon-wrapper {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 120px;
+    height: 120px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
 
   img {
-    width: 30px;
+    width: 60px;
+    height: 60px;
   }
 }
 
 @media only screen and (max-width: 700px) {
   .skills {
     flex-direction: column;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   }
 }

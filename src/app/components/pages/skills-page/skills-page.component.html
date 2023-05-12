@@ -5,46 +5,15 @@
       supportingText="My expertise"
     ></app-page-title>
     <div class="skills">
-      <div class="skill-type">
-        <div class="skills-wrapper">
-          <h3>Frontend</h3>
-          <ng-container *ngFor="let skill of skills.frontend">
-            <div class="skill">
-              <h4>{{ skill.label }}</h4>
-              <app-skill-bar
-                [skillWidth]="skill.rating"
-                [triggerAnimation]="triggerAnimation"
-              ></app-skill-bar>
-            </div>
-          </ng-container>
-        </div>
-      </div>
-      <div class="skill-type">
-        <div class="skills-wrapper">
-          <h3>Backend</h3>
-          <ng-container *ngFor="let skill of skills.backend">
-            <div class="skill">
-              <h4>{{ skill.label }}</h4>
-              <app-skill-bar
-                [skillWidth]="skill.rating"
-                [triggerAnimation]="triggerAnimation"
-              ></app-skill-bar>
-            </div>
-          </ng-container>
-        </div>
-      </div>
-      <div class="skill-type">
-        <div class="skills-wrapper">
-          <h3>Additional</h3>
-          <ng-container *ngFor="let skill of skills.additional">
-            <div class="skill">
-              <h4>{{ skill.label }}</h4>
-              <app-skill-bar
-                [skillWidth]="skill.rating"
-                [triggerAnimation]="triggerAnimation"
-              ></app-skill-bar>
-            </div>
-          </ng-container>
+      <div *ngFor="let skill of skillsConfig" class="skill-wrapper">
+        <div class="skill">
+          <div class="icon-wrapper">
+            <img
+              [src]="'/assets/' + skill.iconType + '.svg'"
+              alt="skill icon"
+            />
+          </div>
+          <p>{{ skill.label }}</p>
         </div>
       </div>
     </div>

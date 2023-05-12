@@ -9,11 +9,9 @@ import { AboutPageComponent } from './components/pages/about-page/about-page.com
 import { ProjectsPageComponent } from './components/pages/projects-page/projects-page.component';
 import { SkillsPageComponent } from './components/pages/skills-page/skills-page.component';
 import { ContactPageComponent } from './components/pages/contact-page/contact-page.component';
-import { SkillBarComponent } from './components/skill-bar/skill-bar.component';
 import { PageDividerComponent } from './components/page-divider/page-divider.component';
 import { PageTitleComponent } from './components/page-title/page-title.component';
 import { ExperiencePageComponent } from './components/pages/experience-page/experience-page/experience-page.component';
-import { ProjectItemComponent } from './components/project-item/project-item.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +22,9 @@ import { ProjectItemComponent } from './components/project-item/project-item.com
     ProjectsPageComponent,
     SkillsPageComponent,
     ContactPageComponent,
-    SkillBarComponent,
     PageDividerComponent,
     PageTitleComponent,
     ExperiencePageComponent,
-    ProjectItemComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
