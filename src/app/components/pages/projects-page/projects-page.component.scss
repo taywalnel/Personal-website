@@ -7,6 +7,18 @@
   }
 }
 
+.intro-wrapper {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.projects-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
 .project-wrapper {
   width: 100%;
   padding: 20px;
@@ -25,6 +37,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    padding: 0 4px;
 
     .description {
       display: flex;
@@ -86,6 +99,7 @@
     flex-direction: column;
     align-items: center;
     width: fit-content !important;
+    max-width: 490px;
 
     .project-image {
       width: 100% !important;

@@ -13,6 +13,7 @@ import { SkillBarComponent } from './components/skill-bar/skill-bar.component';
 import { PageDividerComponent } from './components/page-divider/page-divider.component';
 import { PageTitleComponent } from './components/page-title/page-title.component';
 import { ExperiencePageComponent } from './components/pages/experience-page/experience-page/experience-page.component';
+import { ProjectItemComponent } from './components/project-item/project-item.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ExperiencePageComponent } from './components/pages/experience-page/expe
     PageDividerComponent,
     PageTitleComponent,
     ExperiencePageComponent,
+    ProjectItemComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
