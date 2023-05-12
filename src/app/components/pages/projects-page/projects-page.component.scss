@@ -25,6 +25,13 @@
   box-sizing: border-box;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 20px;
+  opacity: 0;
+  transform: translateX(-10%);
+  transition: all 0.5s cubic-bezier(0.37, 0, 0.63, 1);
+
+  &:nth-child(2) {
+    transform: translateX(10%);
+  }
 
   display: flex;
   gap: 30px;
@@ -96,6 +103,17 @@
     height: auto;
     max-width: 450px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+}
+
+.current-page {
+  .project-wrapper {
+    opacity: 1;
+    transform: translateY(0);
+
+    &:nth-child(2) {
+      transition-delay: 0.5s;
+    }
   }
 }
 
