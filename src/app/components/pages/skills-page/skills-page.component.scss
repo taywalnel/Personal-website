@@ -13,6 +13,10 @@
 .skill-wrapper {
   display: flex;
   justify-content: center;
+
+  transform: translateX(20%);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
 }
 
 .skill {
@@ -37,9 +41,54 @@
   }
 }
 
+.current-page .skill-wrapper {
+  transform: translateX(0);
+  opacity: 1;
+
+  &:nth-of-type(2) {
+    transition-delay: 0.1s !important;
+  }
+  &:nth-of-type(3) {
+    transition-delay: 0.15s;
+  }
+  &:nth-of-type(4) {
+    transition-delay: 0.2s;
+  }
+  &:nth-of-type(5) {
+    transition-delay: 0.25s;
+  }
+  &:nth-of-type(6) {
+    transition-delay: 0.3s;
+  }
+  &:nth-of-type(7) {
+    transition-delay: 0.35s;
+  }
+  &:nth-of-type(8) {
+    transition-delay: 0.4s;
+  }
+  &:nth-of-type(9) {
+    transition-delay: 0.45s;
+  }
+  &:nth-of-type(10) {
+    transition-delay: 0.5s;
+  }
+  &:nth-of-type(11) {
+    transition-delay: 0.55s;
+  }
+  &:nth-of-type(12) {
+    transition-delay: 0.6s;
+  }
+}
+
 @media only screen and (max-width: 700px) {
   .skills {
     flex-direction: column;
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .skills {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)) !important;
   }
 }

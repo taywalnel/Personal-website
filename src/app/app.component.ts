@@ -1,16 +1,13 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   BehaviorSubject,
   debounceTime,
-  delay,
-  delayWhen,
   distinctUntilChanged,
   filter,
   fromEvent,
   merge,
   Observable,
   of,
-  Subject,
   switchMap,
   tap,
 } from 'rxjs';
@@ -29,14 +26,12 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.scrollEvent$ = fromEvent(document, 'scroll').pipe();
     this.currentPage$ = merge(this.pageInitialized$, this.scrollEvent$).pipe(
-      debounceTime(10),
+      debounceTime(200),
       switchMap(() => this.getCurrentPage()),
       filter(this.isDefined),
-      distinctUntilChanged(),
-      delayWhen((value, index) =>
-        index === 0 ? of(value).pipe(delay(500)) : of(value)
-      ),
-      debounceTime(300)
+      distinctUntilChanged((prev, curr) => {
+        return prev === curr;
+      })
     );
   }
 

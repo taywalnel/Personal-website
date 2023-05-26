@@ -59,4 +59,6 @@ export class SkillsPageComponent {
       iconType: 'photoshop',
     },
   ];
+
+  constructor(public app: AppComponent) {}
 }
