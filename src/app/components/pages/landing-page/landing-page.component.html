@@ -5,11 +5,13 @@
   [class.page-loaded]="app.pageInitialized$ | async"
 >
   <div class="page-wrapper-inner">
-    <img
-      (load)="handleAvatarImgLoad()"
-      class="avatar"
-      src="assets/avatar.svg"
-    />
+    <div class="avatar-wrapper">
+      <img
+        (load)="handleAvatarImgLoad()"
+        class="avatar"
+        src="assets/avatar.svg"
+      />
+    </div>
     <div class="intro-wrapper">
       <div class="intro-message">
         <span class="large-text"
