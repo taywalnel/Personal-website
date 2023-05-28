@@ -4,7 +4,7 @@
   [class.in-viewport]="(app.currentPage$ | async) === 'landing-page'"
   [class.page-loaded]="app.pageInitialized$ | async"
 >
-  <div class="page-content">
+  <div class="page-wrapper-inner">
     <img
       (load)="handleAvatarImgLoad()"
       class="avatar"
