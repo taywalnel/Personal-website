@@ -1,7 +1,9 @@
 <div
   id="experience-page"
   class="page-wrapper"
-  [class.current-page]="(app.currentPage$ | async) === 'experience-page'"
+  [class.current-page]="
+    (currentPageService.currentPage$ | async) === 'experience-page'
+  "
 >
   <div class="page-wrapper-inner">
     <app-page-title

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AppComponent } from 'src/app/app.component';
+import { CurrentPageService } from 'src/app/services/current-page.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -7,9 +8,12 @@ import { AppComponent } from 'src/app/app.component';
   styleUrls: ['./landing-page.component.scss'],
 })
 export class LandingPageComponent {
-  constructor(public app: AppComponent) {}
+  constructor(
+    public app: AppComponent,
+    public currentPageService: CurrentPageService
+  ) {}
 
   handleAvatarImgLoad() {
-    this.app.pageInitialized$.next(true);
+    this.app.appInitialized$.next(true);
   }
 }
