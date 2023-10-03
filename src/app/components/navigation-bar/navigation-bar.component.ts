@@ -1,6 +1,7 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { AppComponent } from 'src/app/app.component';
+import { CurrentPageService } from 'src/app/services/current-page.service';
 
 @Component({
   selector: 'app-navigation-bar',
@@ -12,13 +13,14 @@ export class NavigationBarComponent implements OnInit {
   currentPage = '';
 
   constructor(
+    public app: AppComponent,
     private viewportScroller: ViewportScroller,
-    public app: AppComponent
+    private currentPageService: CurrentPageService
   ) {}
 
   ngOnInit() {
     this.viewportScroller.setOffset([0, 30]);
-    this.app.currentPage$.subscribe((currentPage) => {
+    this.currentPageService.currentPage$.subscribe((currentPage) => {
       this.currentPage = currentPage;
     });
   }

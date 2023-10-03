@@ -1,8 +1,10 @@
 <div
   id="landing-page"
   class="page-wrapper"
-  [class.in-viewport]="(app.currentPage$ | async) === 'landing-page'"
-  [class.page-loaded]="app.pageInitialized$ | async"
+  [class.in-viewport]="
+    (currentPageService.currentPage$ | async) === 'landing-page'
+  "
+  [class.page-loaded]="app.appInitialized$ | async"
 >
   <div class="page-wrapper-inner">
     <div class="avatar-wrapper">

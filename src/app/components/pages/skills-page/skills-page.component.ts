@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { AppComponent } from 'src/app/app.component';
+import { Component } from '@angular/core';
+import { CurrentPageService } from 'src/app/services/current-page.service';
 
 @Component({
   selector: 'app-skills-page',
@@ -60,5 +60,5 @@ export class SkillsPageComponent {
     },
   ];
 
-  constructor(public app: AppComponent) {}
+  constructor(public currentPageService: CurrentPageService) {}
 }
