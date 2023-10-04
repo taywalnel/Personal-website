@@ -1,0 +1,18 @@
+<div class="title-wrapper">
+  <h3 class="title">{{ experience.affiliation }}</h3>
+  <span class="subtext">{{ experience.location }}</span>
+</div>
+
+<div *ngFor="let position of experience.positions" class="position">
+  <img *ngIf="position.type === 'employment'" src="assets/employment.svg" />
+  <img *ngIf="position.type === 'education'" src="assets/education.svg" />
+  <div class="position-details">
+    <h4 class="title">{{ position.title }}</h4>
+    <div class="subtext">
+      <span>{{ position.start }} - {{ position.end }}</span>
+      <span> · {{ position.type | titlecase }}</span>
+      <span> · {{ position.isFullTime ? "Full-time" : "Part-time" }}</span>
+    </div>
+    <div></div>
+  </div>
+</div>

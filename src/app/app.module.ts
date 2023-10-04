@@ -11,7 +11,8 @@ import { SkillsPageComponent } from './components/pages/skills-page/skills-page.
 import { ContactPageComponent } from './components/pages/contact-page/contact-page.component';
 import { PageDividerComponent } from './components/page-divider/page-divider.component';
 import { PageTitleComponent } from './components/page-title/page-title.component';
-import { ExperiencePageComponent } from './components/pages/experience-page/experience-page/experience-page.component';
+import { ExperiencePageComponent } from './components/pages/experience-page/experience-page.component';
+import { ExperienceItemComponent } from './components/pages/experience-page/components/experience-item/experience-item.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ExperiencePageComponent } from './components/pages/experience-page/expe
     PageDividerComponent,
     PageTitleComponent,
     ExperiencePageComponent,
+    ExperienceItemComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

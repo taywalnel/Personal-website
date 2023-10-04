@@ -1,0 +1,59 @@
+<div
+  id="experience-page"
+  class="page-wrapper"
+  [class.current-page]="
+    (currentPageService.currentPage$ | async) === 'experience-page'
+  "
+>
+  <div class="page-wrapper-inner">
+    <app-page-title
+      title="Experience"
+      supportingText="My journey so far"
+    ></app-page-title>
+    <div class="content-wrapper">
+      <div class="text-content">
+        <h3>
+          My journey began in 2017 when I moved to the United States to study
+          Computer Science at Emporia State University.
+        </h3>
+        <p>
+          Here, I completed a degree in Computer Science while also spending my
+          final 2 years working as a Student Web Developer for ESU's IT
+          Department.
+        </p>
+        <br />
+        <h3>
+          After graduating in 2021, I returned to New Zealand and accepted a my
+          first full-time position as a Software Developer at the University of
+          Canterbury.
+        </h3>
+        <p>
+          Here, I contributed to the development of UC's Student Management
+          System consisting of three web-based applications leveraging Angular
+          and NodeJS.
+        </p>
+        <br />
+        <h3>
+          Skip to present day, I am now working as a Software Developer at Auto
+          & General, an insurance company, and am based in Brisbane, Australia.
+        </h3>
+        <p>
+          Here, I am contributing to the development of a policy management
+          system leveraging Angular and NGRX.
+        </p>
+      </div>
+      <div class="timeline-content">
+        <div class="arrow-wrapper">
+          <div class="arrow"></div>
+          <div class="arrow-dot top"></div>
+          <div class="arrow-dot bottom"></div>
+        </div>
+
+        <app-experience-item
+          *ngFor="let experience of timelineItems"
+          [experience]="experience"
+        ></app-experience-item>
+      </div>
+    </div>
+  </div>
+</div>
